@@ -11,7 +11,7 @@ config_version=5
 [application]
 
 config/name="godot-gdscript-first-2d-game"
-run/main_scene="uid://d4la8bws0q4hy"
+run/main_scene="uid://bs6n3ijyapxmb"
 config/features=PackedStringArray("4.4", "GL Compatibility")
 config/icon="res://icon.svg"
 
