@@ -1,3 +1,6 @@
 # Godot 4+ specific ignores
 .godot/
 /android/
+
+# Mac file for storing icon positions in Finder
+.DS_Store
