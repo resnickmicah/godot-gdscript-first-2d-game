@@ -7,7 +7,7 @@ func _ready() -> void:
     # new_game()
     pass
 
-func _process(delta: float) -> void:
+func _process(_delta: float) -> void:
     pass
 
 func game_over():
@@ -15,6 +15,9 @@ func game_over():
     $MobTimer.stop()
     $HUD.show_game_over()
     get_tree().call_group("mobs", "queue_free")
+    $Music.stop()
+    $DeathSound.play()
+    #print("Exiting Main.game_over")
 
 
 func new_game():
@@ -23,6 +26,7 @@ func new_game():
     $StartTimer.start()
     $HUD.update_score(score)
     $HUD.show_message("Get Ready")
+    $Music.play()
 
 func _on_mob_timer_timeout():
     # Create a new instance of the Mob scene.
